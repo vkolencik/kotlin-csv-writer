@@ -23,7 +23,7 @@ fun main() {
                 line {
                     cell(it.key)
                     cell(it.value)
-                    cell(100 * Random.nextDouble(), 3)
+                    cell(100 + 20 * (Random.nextDouble() - 0.5), 3)
                 }
             }
         }

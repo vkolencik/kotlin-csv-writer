@@ -19,10 +19,10 @@ fun main() {
                 cell("IQ")
             }
 
-            for (person in family) {
+            family.map {
                 line {
-                    cell(person.key)
-                    cell(person.value)
+                    cell(it.key)
+                    cell(it.value)
                     cell(100 * Random.nextDouble(), 3)
                 }
             }

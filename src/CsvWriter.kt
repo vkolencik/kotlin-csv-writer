@@ -7,6 +7,9 @@ fun csv(output: Writer, init: CsvWriter.() -> Unit): CsvWriter {
     return csvWriter
 }
 
+@DslMarker annotation class CsvElementMarker
+
+@CsvElementMarker
 class CsvWriter(private val output: Writer) {
 
     companion object {
@@ -21,6 +24,7 @@ class CsvWriter(private val output: Writer) {
     }
 }
 
+@CsvElementMarker
 class Line(private val output: Writer) {
 
     companion object {
